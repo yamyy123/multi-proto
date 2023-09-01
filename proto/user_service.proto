@@ -1,0 +1,15 @@
+syntax="proto3";
+
+package pb;
+
+import "proto/user.proto";
+
+option go_package = "github.com/kiran-blockchain/golang-mongodb-grpc/pb";
+
+service Userservice {
+    rpc GetMe(GetMeRequest)returns (UserResponse){}
+}
+
+message GetMeRequest {
+    string Id =1;
+}

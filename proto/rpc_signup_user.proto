@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = "github.com/kiran-blockchain/golang-mongodb-grpc/pb";
+
+import "proto/user.proto";
+
+message SignUpUserInput {
+    string name =1;
+    string email =2;
+    string password =3;
+    string passwordconfirm =4;
+}
+
+message SignUpUserName {
+    message SignUpUserResponse { User user =1;}
+}
